@@ -1,0 +1,20 @@
+\begin {verbatim}
+class Point {
+  num x;
+  num y;
+
+  Point(this.x, this.y);
+
+  // Named constructor
+  Point.fromJson(Map json) {
+    x = json['x'];
+    y = json['y'];
+  }
+  num vectorSize() => sqrt(pow(x, 2) + pow(y, 2));
+}
+
+void main(){
+  Map<String, num> json = {"x" : 23, "y" : 47};
+  var point = new Point.fromJson(json);
+}
+\end{verbatim}
